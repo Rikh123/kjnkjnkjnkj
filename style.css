@@ -1,0 +1,121 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .bg_heart {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url('gold1.jpg');
+    background-size: cover;
+    z-index: -1;
+  }
+  
+  /* Container for centered content */
+  .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: cursive;
+  }
+  
+  /* Basic heart styling */
+  .heart {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transform: rotate(-45deg);
+    background-size: cover;
+  }
+  
+  /* Styling the heart shape */
+  .heart:before, .heart:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 50%;
+  }
+  
+  /* Left side of the heart */
+  .heart:before {
+    top: -50%;
+    left: 0;
+  }
+  
+  /* Right side of the heart */
+  .heart:after {
+    top: 0;
+    right: -50%;
+  }
+  
+  /* Animations */
+  @keyframes move1 {
+    0% { transform: translate(0, 0) rotate(-45deg); }
+    25% { transform: translate(50px, -50px) rotate(-45deg); }
+    50% { transform: translate(-50px, -100px) rotate(-45deg); }
+    75% { transform: translate(-100px, -50px) rotate(-45deg); }
+    100% { transform: translate(0, 0) rotate(-45deg); }
+  }
+  
+  @keyframes move2 {
+    0% { transform: translate(0, 0) rotate(-45deg); }
+    25% { transform: translate(-50px, -50px) rotate(-45deg); }
+    50% { transform: translate(50px, -100px) rotate(-45deg); }
+    75% { transform: translate(100px, -50px) rotate(-45deg); }
+    100% { transform: translate(0, 0) rotate(-45deg); }
+  }
+  
+  @keyframes move3 {
+    0% { transform: translate(0, 0) rotate(-45deg); }
+    25% { transform: translate(-25px, -25px) rotate(-45deg); }
+    50% { transform: translate(25px, -75px) rotate(-45deg); }
+    75% { transform: translate(75px, -25px) rotate(-45deg); }
+    100% { transform: translate(0, 0) rotate(-45deg); }
+  }
+  
+  /* Apply heart styles and animations */
+  .heart1 {
+    background-image: url('gold1.jpg');
+    animation: move1 15s infinite alternate;
+  }
+  
+  .heart2 {
+    background-image: url('gold2.jpg');
+    animation: move2 20s infinite alternate;
+  }
+  
+  .heart3 {
+    background-image: url('gold3.jpg');
+    animation: move3 25s infinite alternate;
+  }
+  
+  /* Positioning hearts in the container */
+  .heart1, .heart2, .heart3 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .heart1 {
+    top: 20%;
+    left: 20%;
+  }
+  
+  .heart2 {
+    top: 50%;
+    left: 50%;
+  }
+  
+  .heart3 {
+    top: 80%;
+    left: 80%;
+  }
+  
